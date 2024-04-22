@@ -1,7 +1,8 @@
 "use client";
-import { Review } from "@/api/types";
+import { useReviews } from "./ReviewsContext";
 
-export default function AverageRating({ reviews }: { reviews: Review[] }) {
+export default function AverageRating() {
+  const [reviews] = useReviews();
   return (
     <>
       {reviews && reviews?.length && (
